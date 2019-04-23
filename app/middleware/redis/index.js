@@ -1,0 +1,27 @@
+const path = require('path');
+const config = require(path.resolve('./app/config'));
+const redis = require('redis');
+const debug = require('debug')('app:redis');
+const client = redis.createClient(config.redis.port, config.redis.hosts);
+
+client.on('ready', () => {
+  debug('redis online');
+});
+
+client.on('connect', () => {
+  debug(`connect redis ${config.redis.hosts + ':' + config.redis.port} success`);
+});
+
+client.on('error', (err) => {
+  debug('err', err);
+});
+
+// 数据库密码
+// client.auth(config.redis.pass, () => {
+//     debug('auth redis success');
+// });
+
+
+module.exports = {
+  client
+};

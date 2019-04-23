@@ -1,0 +1,27 @@
+{
+  "name": "wepy-demo",
+  "version": "0.0.2",
+  "description": "A WePY project",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "DEBUG=app*,socket.io* nodemon app.js"
+  },
+  "author": "claviering <claviering@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "connect-redis": "^3.4.1",
+    "cookie-parser": "^1.4.4",
+    "ip": "^1.1.5",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.10.1",
+    "koa-static": "^5.0.0",
+    "log4js": "^4.0.2",
+    "mongoose": "^5.4.17",
+    "redis": "^2.8.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1"
+  }
+}
