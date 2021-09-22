@@ -1,5 +1,5 @@
 #! /bin/sh
-echo 'make sure scnu.conf  file exist'
+echo 'make sure server.conf file exist'
 echo 'openssl version ...'
 echo 'step 0: create root private key ...'
 echo 'step 1: create root certificate ...'
